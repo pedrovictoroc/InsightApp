@@ -76,7 +76,6 @@ export const ButtonContainer = styled.View`
 `;
 
 export const Button = styled.TouchableOpacity`
-    border: 1px;
     border-radius: 6px;
     background: #007db8;
 
