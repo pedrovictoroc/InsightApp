@@ -7,7 +7,7 @@ export const LogoContainer = styled.View`
 export const FirstLogoText = styled.Text`
     margin-bottom: 30px;
 
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 200;
     font-size: 30px;
@@ -19,7 +19,7 @@ export const FirstLogoText = styled.Text`
 export const SecondLogoText = styled.Text`
     margin-bottom: 30px;
 
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 200;
     font-size: 30px;
@@ -52,7 +52,7 @@ export const InputContainer = styled.View`
 export const InputName = styled.Text`
     margin-top: 10px;
     margin-bottom: 5px;
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 200;
     font-size: 40px;
@@ -86,8 +86,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const ButtonText = styled.Text`
-    
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 200;
     font-size: 20px;
