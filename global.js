@@ -7,3 +7,13 @@ export const Container = styled.View`
 
     background: #EAEAEA;
 `;
+
+export const LoadingText = styled.Text`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+
+`;
