@@ -23,13 +23,31 @@ import { HomeContainer,
 
 export default function Home(){
     const [data, setData] = useState([])
+    const [page, setPage] = useState(1)
+
+    async function loadPage(){
+        // Como a APi não fornece o X-total-count
+        // não há como controlar o fim do infinity scroll
+        async function getDataFromJobsGitHub(){
+            const response = await API.get(`/positions.json?page=${page}&search=code`);
+
+            if(response.data.length > 0){
+                setData([...data, ...response.data])
+                setPage(page+1)
+            }
+            
+        }
+
+        getDataFromJobsGitHub()
+    }
 
     useEffect(() =>{
         try{
             async function getDataFromJobsGitHub(){
-                const response = await API.get("positions.json?description=python&markdown=true");
+                const response = await API.get(`/positions.json?description=python&markdown=true&page=${page}`);
 
                 setData(response.data)
+                console.log(response.data.length)
             }
             getDataFromJobsGitHub()
         }catch(e){
@@ -67,10 +85,12 @@ export default function Home(){
                 </JobSearchContainer>
             </SearchBar>
             
-
+            
             <JobDisplayContainer data={data}
                                 keyExtractor={item => item.id}
                                 renderItem={ListedElement}
+                                onEndReachedThreshold={0.1}
+                                onEndReached={()=> loadPage()}
             />
 
         </HomeContainer>
