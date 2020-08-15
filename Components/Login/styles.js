@@ -12,7 +12,7 @@ export const FirstLogoText = styled.Text`
     font-weight: 200;
     font-size: 30px;
     line-height: 36px;
-    color: #000000;
+    color: #EEAB02;
 
 `;
 
@@ -20,7 +20,7 @@ export const SecondLogoText = styled.Text`
     margin-bottom: 30px;
 
     font-family: Poppins;
-    font-style: normal;
+    font-style: italic;
     font-weight: 200;
     font-size: 30px;
     line-height: 36px;
