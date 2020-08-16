@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const JobContainer = styled.View`
+export const JobContainer = styled.TouchableOpacity`
     flex-direction: row;
 
     height: 120px;

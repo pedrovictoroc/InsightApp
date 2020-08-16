@@ -49,7 +49,6 @@ export default function Home(){
                 const response = await API.get(`/positions.json?description=python&markdown=true&page=${page}`);
 
                 setData(response.data)
-                console.log(response.data.length)
             }
             getDataFromJobsGitHub()
         }catch(e){
@@ -91,7 +90,7 @@ export default function Home(){
             
             <JobDisplayContainer data={data}
                                 keyExtractor={item => item.id}
-                                renderItem={ListedElement}
+                                renderItem={(data) => <ListedElement data={data}/>}
                                 onEndReachedThreshold={0.1}
                                 onEndReached={()=> loadPage()}
             />
