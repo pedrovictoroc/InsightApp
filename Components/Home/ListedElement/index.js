@@ -15,12 +15,12 @@ import { JobContainer,
 export default function ListedElement( {data} ){
     const navigator = useNavigation()
 
-    function navigateToLogin(){
-        navigator.navigate('Login')
+    function navigateToJobDescription(data){
+        navigator.navigate('JobDescription', {data})
     }
     
     return(
-        <JobContainer onPress={()=> navigateToLogin()}>
+        <JobContainer onPress={()=> navigateToJobDescription(data)}>
             
             <JobImage source={data.item.company_logo != null ? {uri: data.item.company_logo} : {uri: "https://avatars1.githubusercontent.com/u/9919?s=200&v=4" }}/>
         

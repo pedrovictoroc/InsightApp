@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
 
 export const LogoContainer = styled.View`
+    margin-top: 10px;
     flex-direction: row;
 `
 
