@@ -6,6 +6,8 @@ import API from '../../API/api'
 
 import { MaterialIcons } from '@expo/vector-icons'
 
+import { Container } from '../../global'
+
 import { LogoContainer,
          FirstLogoText,
          SecondLogoText } from '../Login/styles'
@@ -58,6 +60,7 @@ export default function Home(){
 
 
     return(
+        <Container>
         <HomeContainer>
             <SearchBar>
                 <LogoContainer>
@@ -94,5 +97,6 @@ export default function Home(){
             />
 
         </HomeContainer>
+        </Container>
     )
 }

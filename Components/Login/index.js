@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 
+import { Container } from '../../global'
+
+import { useNavigation } from '@react-navigation/native'
+
 import { LogoContainer,
          FirstLogoText,
          SecondLogoText,
@@ -15,9 +19,15 @@ export default function Login(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [passVisibility, setPassVisibility] = useState(true)
+
+    const navigator = useNavigation()
+
+    function navigateToHome(){
+        navigator.navigate('Home')
+    }
     
     return(
-        <>
+        <Container>
             <LogoContainer>
                 <FirstLogoText>Job</FirstLogoText>
                 <SecondLogoText>Hub</SecondLogoText>
@@ -41,7 +51,7 @@ export default function Login(){
                 </InputContainer>
             
                 <ButtonContainer>
-                    <Button>
+                    <Button onPress={() => navigateToHome()}>
                         <ButtonText>Entrar</ButtonText>
                     </Button>
                     <Button>
@@ -49,6 +59,6 @@ export default function Login(){
                     </Button>
                 </ButtonContainer>
             </DataContainer>
-        </>
+        </Container>
     )
 }

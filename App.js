@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import * as Fonts from 'expo-font'
 import { Poppins_400Regular } from '@expo-google-fonts/poppins'
 
-import Login from './Components/Login'
-import Home from './Components/Home'
+import Routes from './Components/Routes'
 
 import { Container, LoadingText } from './global'
 
@@ -20,10 +19,8 @@ export default function App() {
       </Container>
     )
   }else{
-    return (    
-      <Container>
-        <Home/>
-      </Container>
-      );
+    return (
+        <Routes/>
+    );
   }
 }
