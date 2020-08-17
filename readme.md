@@ -12,3 +12,18 @@
 
 # Login
 <img src="demoImages/login.jpeg"/>
+
+# Home
+<img src="demoImages/home.jpeg"/>
+
+# Home Search
+<img src="demoImages/homePesquisa.jpeg"/>
+
+# Menu Settings
+<img src="demoImages/settingsMenu.jpeg"/>
+
+# How It Works?
+<img src="demoImages/comoFunciona.jpeg"/>
+
+# API Documentation
+<img src="demoImages/documentacaoApi.jpeg"/>
