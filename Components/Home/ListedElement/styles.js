@@ -68,7 +68,7 @@ export const DataResponse = styled.Text`
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 14px;
     text-align: right;
 

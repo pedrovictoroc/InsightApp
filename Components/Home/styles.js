@@ -6,6 +6,7 @@ export const HomeContainer = styled.View`
     width: 100%;
     align-items: center;
     justify-content: center;
+    
 `;
 
 export const SearchBar = styled.View`
@@ -78,4 +79,39 @@ export const JobDisplayContainer = styled.FlatList`
     height: 70%;
     width: 90%;
 
+`;
+
+export const SettingsContainer = styled.Modal`
+    height: 20%;
+    width: 100%;
+
+    border-radius: 8px;
+    background: #ffffff;
+`;
+
+export const CenteredView = styled.View`
+    height: 100%;
+    width:100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ModalView = styled.View`
+    height: 100%;
+    width:100%;
+    background: #000000;
+    border-radius: 20px;
+    align-items: center;
+    elevation: 5;
+`;
+
+export const FulltimeContainer = styled.View`
+    height: 40px;
+    width: 50%;
+
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
 `;

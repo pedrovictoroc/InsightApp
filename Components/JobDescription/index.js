@@ -24,16 +24,22 @@ import { JobHubHeader,
          CompanyDescriptionTextContainer,
          CompanyDescriptionText } from './styles'
 
-export default function JobDescription(){
+export default function JobDescription(){    
+    const navigator = useNavigation()
 
+    
     const route = useRoute();
 
     const data = route.params.data
 
+    function navigateToHome(data){
+        navigator.navigate('Home')
+    }
+    
     return(
         <Container>
             <JobHubHeader>
-                <GoBackButton>
+                <GoBackButton onPress={()=> navigateToHome()}>
                     <MaterialIcons name="keyboard-return" size={40}/>
                 </GoBackButton>
                 <LogoContainer>
