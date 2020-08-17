@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from './Login/'
 import Home from './Home/'
 import JobDescription from './JobDescription/'
+import ApiPage from './ApiPage/'
 
 const AppStack = createStackNavigator()
 
@@ -20,6 +21,7 @@ export default function Routes(){
                 <AppStack.Screen name="Login" component={Login}/>
                 <AppStack.Screen name="Home" component={Home}/>
                 <AppStack.Screen name="JobDescription" component={JobDescription}/>
+                <AppStack.Screen name="ApiPage" component={ApiPage}/>
             </AppStack.Navigator>
         </NavigationContainer>
     )

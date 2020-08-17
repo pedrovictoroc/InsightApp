@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
-import ListedElement from './ListedElement'
+import { MaterialIcons } from '@expo/vector-icons'
+
+import { useNavigation } from '@react-navigation/native'
 
 import API from '../../API/api'
 
-import { MaterialIcons } from '@expo/vector-icons'
+import ListedElement from './ListedElement'
 
 import { Container } from '../../global'
 
@@ -41,6 +43,9 @@ import {
 } from "react-native";
 
 export default function Home(){
+
+    const navigator = useNavigation()
+
     const [data, setData] = useState([])
     const [page, setPage] = useState(1)
 
@@ -51,6 +56,15 @@ export default function Home(){
     const [fulltime , setFulltime] = useState(false)
 
     const [shouldReload, setShouldReload] = useState(false)
+
+    function navigateToApiPage(){
+        navigator.navigate("ApiPage")
+    }
+
+    
+    function navigateToHowItWorks(){
+        navigator.navigate("HowItWorks")
+    }
 
     async function loadPage(){
         // Como a APi não fornece o X-total-count
@@ -70,6 +84,7 @@ export default function Home(){
 
         getDataFromJobsGitHub()
     }
+
     useEffect(() =>{
         try{
             loadPage()
@@ -93,7 +108,7 @@ export default function Home(){
                         <MaterialIcons onPress={()=>{}}
                                        name="question-answer"
                                        size={30}/>
-                        <ApiButton>
+                        <ApiButton onPress={()=>navigateToApiPage()}>
                             <ApiText>API</ApiText>
                         </ApiButton>
                         

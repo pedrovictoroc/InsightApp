@@ -32,9 +32,10 @@ export default function JobDescription(){
 
     const data = route.params.data
 
-    function navigateToHome(data){
-        navigator.navigate('Home')
+    function navigateToHome(){
+        navigator.goBack()
     }
+
     
     return(
         <Container>
