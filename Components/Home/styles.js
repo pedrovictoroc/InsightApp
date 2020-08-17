@@ -115,3 +115,39 @@ export const FulltimeContainer = styled.View`
 
     flex-direction: row;
 `;
+
+export const TextContainer = styled.View`
+    width: 50%;
+    height: 100%;
+    
+    justify-content: center;
+    flex-direction: row;
+`;
+
+export const ChangePageContainer = styled.View`
+    margin-top: 8px;
+    width: 50%;
+    
+    height: 100%;
+    align-items: flex-start;
+    justify-content:flex-end;
+    flex-direction: row;
+`;
+
+export const ApiButton = styled.TouchableOpacity`
+    width: 30%;
+    height: 100%;
+
+    margin-left: 10px;
+`;
+
+export const ApiText = styled.Text`
+    margin-bottom: 30px;
+
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+`;

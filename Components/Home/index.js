@@ -23,15 +23,22 @@ import { HomeContainer,
          ConfigOptions,
          JobDisplayContainer,
          SettingsContainer,
-         FulltimeContainer } from './styles'
-         import {
-            Alert,
-            Modal,
-            StyleSheet,
-            Text,
-            TouchableHighlight,
-            View
-          } from "react-native";
+         FulltimeContainer,
+         ChangePageContainer,
+         TextContainer,
+         ApiButton,
+         ApiText } from './styles'
+
+/*
+Infelizmente styled-components não reconhece propriedades de Modal
+*/
+import {
+    Alert,
+    StyleSheet,
+    Text,
+    TouchableHighlight,
+    View
+} from "react-native";
 
 export default function Home(){
     const [data, setData] = useState([])
@@ -52,7 +59,6 @@ export default function Home(){
             const response = await API.get(`/positions.json?page=${page}&search=${description}&location=${location}&full_time=${fulltime}&description=${description}&markdown=false`);
 
             if(!changePage && response.data.length > 0){
-                console.log(response.data.length)
                 setData([...response.data])
             }
             if(changePage && response.data.length > 0){
@@ -78,8 +84,21 @@ export default function Home(){
         <HomeContainer>
             <SearchBar>
                 <LogoContainer>
-                    <FirstLogoText>Job</FirstLogoText>
-                    <SecondLogoText>Hub</SecondLogoText>
+                    <TextContainer>
+                        <FirstLogoText>Job</FirstLogoText>
+                        <SecondLogoText>Hub</SecondLogoText>
+                    </TextContainer>
+                    
+                    <ChangePageContainer>
+                        <MaterialIcons onPress={()=>{}}
+                                       name="question-answer"
+                                       size={30}/>
+                        <ApiButton>
+                            <ApiText>API</ApiText>
+                        </ApiButton>
+                        
+                    </ChangePageContainer>
+                    
                 </LogoContainer>
 
                 <JobSearchContainer>
@@ -111,7 +130,12 @@ export default function Home(){
             />
 
         </HomeContainer>
-
+        
+        {
+            shouldShowSettings 
+            
+            &&
+        
         <SettingsContainer 
             transparent={true}
             visible={shouldShowSettings}
@@ -186,7 +210,7 @@ export default function Home(){
             </View>
 
         </SettingsContainer>
-        
+        }
         </Container>
     )
 }
