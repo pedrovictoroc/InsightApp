@@ -13,7 +13,6 @@ import { JobHubHeader,
          LogoContainer, } from '../JobDescription/styles'
 
 import { ApiTutorialContainer,
-         ApiTutorialHeader,
          ApiTutorialHeaderText,
          ApiTutorialTextContainer,
          ApiTutorialTitleSectionContainer,

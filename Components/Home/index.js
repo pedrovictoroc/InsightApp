@@ -105,7 +105,7 @@ export default function Home(){
                     </TextContainer>
                     
                     <ChangePageContainer>
-                        <MaterialIcons onPress={()=>{}}
+                        <MaterialIcons onPress={()=>navigateToHowItWorks()}
                                        name="question-answer"
                                        size={30}/>
                         <ApiButton onPress={()=>navigateToApiPage()}>
